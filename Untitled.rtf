@@ -1,0 +1,68 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1543
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\csgray\c0;\csgray\c100000;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 \CocoaLigature0 Traceback (most recent call last):\
+  File "appuselfbot.py", line 669, in <module>\
+    bot.run(get_config_value('config', 'token'), bot=False)\
+  File "/Users/GoatSquad/Library/Python/3.5/lib/python/site-packages/discord/client.py", line 519, in run\
+    self.loop.run_until_complete(self.start(*args, **kwargs))\
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 466, in run_until_complete\
+    return future.result()\
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/futures.py", line 293, in result\
+    raise self._exception\
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/tasks.py", line 241, in _step\
+    result = coro.throw(exc)\
+  File "/Users/GoatSquad/Library/Python/3.5/lib/python/site-packages/discord/client.py", line 490, in start\
+    yield from self.login(*args, **kwargs)\
+  File "/Users/GoatSquad/Library/Python/3.5/lib/python/site-packages/discord/client.py", line 416, in login\
+    yield from getattr(self, '_login_' + str(n))(*args, **kwargs)\
+  File "/Users/GoatSquad/Library/Python/3.5/lib/python/site-packages/discord/client.py", line 346, in _login_1\
+    data = yield from self.http.static_login(token, bot=is_bot)\
+  File "/Users/GoatSquad/Library/Python/3.5/lib/python/site-packages/discord/http.py", line 256, in static_login\
+    data = yield from self.request(Route('GET', '/users/@me'))\
+  File "/Users/GoatSquad/Library/Python/3.5/lib/python/site-packages/discord/http.py", line 136, in request\
+    r = yield from self.session.request(method, url, **kwargs)\
+  File "/Users/GoatSquad/Library/Python/3.5/lib/python/site-packages/aiohttp/client.py", line 555, in __iter__\
+    resp = yield from self._coro\
+  File "/Users/GoatSquad/Library/Python/3.5/lib/python/site-packages/aiohttp/client.py", line 198, in _request\
+    conn = yield from self._connector.connect(req)\
+  File "/Users/GoatSquad/Library/Python/3.5/lib/python/site-packages/aiohttp/connector.py", line 314, in connect\
+    .format(key, exc.strerror)) from exc\
+aiohttp.errors.ClientOSError: [Errno 1] Cannot connect to host discordapp.com:443 ssl:True [Can not connect to discordapp.com:443 [[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:720)]]\
+Unclosed client session\
+client_session: <aiohttp.client.ClientSession object at 0x394960c>\
+Unclosed client session\
+client_session: <aiohttp.client.ClientSession object at 0x3b7c88c>\
+Unclosed client session\
+client_session: <aiohttp.client.ClientSession object at 0x3e3f7ec>\
+Task was destroyed but it is pending!\
+task: <Task pending coro=<Todo.todo_timer() running at /Users/GoatSquad/Downloads/Discord-Selfbot-master/cogs/todo.py:232> wait_for=<Future pending cb=[Task._wakeup()]>>\
+Task was destroyed but it is pending!\
+task: <Task pending coro=<game_and_avatar() running at appuselfbot.py:563> wait_for=<Future pending cb=[Task._wakeup()]>>\
+Task was destroyed but it is pending!\
+task: <Task pending coro=<Debugger.redirection_clock() running at /Users/GoatSquad/Downloads/Discord-Selfbot-master/cogs/debugger.py:426> wait_for=<Future pending cb=[Task._wakeup()]>>\
+Traceback (most recent call last):\
+  File "/Users/GoatSquad/Library/Python/3.5/lib/python/site-packages/aiohttp/connector.py", line 601, in _create_direct_connection\
+    local_addr=self._local_addr)\
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 801, in create_connection\
+    sock, protocol_factory, ssl, server_hostname)\
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 827, in _create_connection_transport\
+    yield from waiter\
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/futures.py", line 380, in __iter__\
+    yield self  # This tells Task to wait for completion.\
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/tasks.py", line 304, in _wakeup\
+    future.result()\
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/futures.py", line 293, in result\
+    raise self._exception\
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/sslproto.py", line 502, in data_received\
+    ssldata, appdata = self._sslpipe.feed_ssldata(data)\
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/sslproto.py", line 201, in feed_ssldata\
+    self._sslobj.do_handshake()\
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/ssl.py", line 641, in do_handshake\
+    self._sslobj.do_handshake()\
+ssl.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:720)\
+}
